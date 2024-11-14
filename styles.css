@@ -1,0 +1,472 @@
+/* Reset e Configurações Básicas */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #0d0d0d;
+  color: #fff;
+  overflow-x: hidden;
+}
+
+/* Container Principal */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Hero Section */
+.hero-section {
+  text-align: center;
+  padding: 100px 20px;
+  background: linear-gradient(135deg, #a8e6cf, #4CAF50, #2e7d32);
+  border-radius: 0 0 50% 50% / 15%;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 10px 50px rgba(0, 0, 0, 0.5);
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.hero-section h1 {
+  font-size: 48px;
+  font-weight: 700;
+  animation: colorPulse 4s infinite;
+}
+
+.hero-section p {
+  font-size: 20px;
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+@keyframes colorPulse {
+  0%, 100% { color: #fff; }
+  50% { color: #ff4b33; }
+}
+
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.hero-button {
+  padding: 15px 30px;
+  margin: 10px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #fff;
+  background-color: #FF3366;
+  border-radius: 30px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.hero-button:hover {
+  background-color: #FF4D79;
+  transform: scale(1.1);
+}
+
+.hero-button.secondary {
+  background-color: #00FF99;
+}
+
+.hero-button.secondary:hover {
+  background-color: #33FF66;
+}
+
+.hero-button.tertiary {
+  background-color: #fff;
+  color: #FF3366;
+}
+
+.hero-button.tertiary:hover {
+  background-color: #FFCCCC;
+  color: #ff3366;
+}
+/* Estilo geral */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f2f5;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* Fundo com Degradê Verde */
+.header {
+  width: 100%;
+  padding: 40px 0;
+  background: linear-gradient(135deg, #4CAF50, #2E7D32);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Estilo do Logo */
+.logo {
+  display: flex;
+  align-items: center;
+  font-family: Arial, sans-serif;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.logo-text {
+  font-size: 3em;
+  color: #ffffff;
+  position: relative;
+}
+
+.logo-flag {
+  width: 20px;
+  height: 12px;
+  background: linear-gradient(to right, red, yellow);
+  clip-path: polygon(0 0, 100% 0, 70% 100%, 0 100%);
+  margin-left: -10px; /* Ajusta a posição em relação ao "i" */
+  position: relative;
+  top: -10px;
+}
+
+.subtext {
+  font-size: 1em;
+  color: #ffffff;
+  display: block;
+  margin-top: 5px;
+  text-transform: lowercase;
+  margin-left: 5px;
+}
+
+
+/* Seção principal */
+.evaluation-section {
+    max-width: 800px;
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    text-align: center;
+}
+
+/* Título da seção */
+.evaluation-section h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #333333;
+}
+
+/* Cartões de setor */
+.sector-card {
+    background: #f8f9fa;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+.sector-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Título do setor */
+.sector-card h3 {
+    font-size: 1.5em;
+    color: #444444;
+}
+
+/* Pergunta do setor */
+.sector-card p {
+    font-size: 1em;
+    color: #666666;
+    margin-bottom: 15px;
+}
+
+/* Botões de avaliação */
+.rating-options {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.rating-button {
+    background: #e0e0e0;
+    border: none;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    font-size: 1.5em;
+    color: #ffffff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    position: relative;
+}
+
+.rating-button:hover {
+    transform: scale(1.1);
+}
+
+.rating-button span {
+    font-size: 0.7em;
+    color: #ffffff;
+    position: absolute;
+    bottom: -15px;
+}
+
+/* Cores para cada avaliação */
+.rating-button[data-rating="excelente"] {
+    background-color: #4CAF50;
+}
+
+.rating-button[data-rating="bom"] {
+    background-color: #FFD700;
+}
+
+.rating-button[data-rating="regular"] {
+    background-color: #FFA500;
+}
+
+.rating-button[data-rating="ruim"] {
+    background-color: #FF4500;
+}
+
+/* Seção de Contato */
+.contact-section {
+  max-width: 800px;
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  margin-top: 30px;
+}
+
+.contact-section h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+  color: #333333;
+}
+
+.contact-section p {
+  font-size: 1em;
+  color: #666666;
+  margin-bottom: 20px;
+}
+
+.contact-section form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-section input,
+.contact-section textarea {
+  width: 100%;
+  padding: 12px;
+  font-size: 1em;
+  border-radius: 8px;
+  border: 1px solid #dddddd;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.contact-section input:focus,
+.contact-section textarea:focus {
+  border-color: #4CAF50;
+  box-shadow: 0 2px 8px rgba(76, 175, 80, 0.2);
+}
+
+.contact-section button {
+  background: #4CAF50;
+  color: #ffffff;
+  padding: 12px;
+  font-size: 1em;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.contact-section button:hover {
+  background: #388E3C;
+}
+
+
+.faq-button {
+  background-color: #00FF99;
+  color: white;
+  padding: 15px 40px;
+  border-radius: 25px;
+  font-size: 18px;
+  margin-top: 20px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.faq-button:hover {
+  background-color: #33FF66;
+  transform: scale(1.05);
+}
+
+/* Estilo da Seção de Ajuda */
+.help-section {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.help-section h2 {
+  font-size: 2em;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333333;
+}
+
+/* Perguntas Frequentes (FAQ) */
+.faq-section h3 {
+  font-size: 1.5em;
+  color: #4CAF50;
+  margin-bottom: 15px;
+}
+
+.faq-item {
+  border-bottom: 1px solid #dddddd;
+  padding: 10px 0;
+}
+
+.faq-question {
+  background: none;
+  border: none;
+  font-size: 1.1em;
+  font-weight: bold;
+  color: #333;
+  cursor: pointer;
+  text-align: left;
+  width: 100%;
+  outline: none;
+}
+
+.faq-answer {
+  display: none;
+  padding: 5px 0 10px;
+  font-size: 1em;
+  color: #666;
+}
+
+.faq-item.active .faq-answer {
+  display: block;
+}
+
+/* Opções de Contato */
+.contact-option h3 {
+  font-size: 1.5em;
+  color: #4CAF50;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.contact-option p {
+  font-size: 1em;
+  color: #666666;
+}
+
+.contact-button {
+  display: inline-block;
+  padding: 10px 15px;
+  margin: 5px;
+  font-size: 1em;
+  color: #ffffff;
+  background-color: #4CAF50;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.contact-button:hover {
+  background-color: #388E3C;
+}
+
+/* Informação sobre Atendimento na Loja */
+.in-store-help {
+  margin-top: 20px;
+  font-size: 1em;
+  color: #666666;
+  text-align: center;
+}
+/* Estilos básicos para a seção de mapa */
+.map-section {
+  max-width: 800px;
+  margin: 20px auto;
+  text-align: center;
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.map-section h2 {
+  font-size: 1.8em;
+  color: #4CAF50;
+  margin-bottom: 20px;
+}
+
+/* Tamanho padrão do iframe */
+.map-section iframe {
+  width: 100%;
+  height: 450px;
+  border: 0;
+}
+
+/* Media Query para Telas Menores (Celulares) */
+@media (max-width: 600px) {
+  .map-section {
+      padding: 15px;
+  }
+
+  .map-section h2 {
+      font-size: 1.5em;
+  }
+
+  .map-section iframe {
+      height: 300px;
+  }
+}
+
+/* Media Query para Telas Médias (Tablets) */
+@media (max-width: 768px) {
+  .map-section {
+      padding: 15px;
+  }
+
+  .map-section h2 {
+      font-size: 1.6em;
+  }
+
+  .map-section iframe {
+      height: 350px;
+  }
+}
+
+/* Media Query para Telas Grandes (Desktop) */
+@media (min-width: 1024px) {
+  .map-section iframe {
+      height: 500px;
+  }
+}
