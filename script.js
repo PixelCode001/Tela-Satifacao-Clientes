@@ -7,3 +7,12 @@ document.addEventListener("DOMContentLoaded", () => {
         menu.classList.toggle("open");
     });
 });
+1
+// Interatividade do Acordeão
+const faqItems = document.querySelectorAll('.faq-item');
+
+faqItems.forEach(item => {
+  item.addEventListener('click', () => {
+    item.classList.toggle('open');
+  });
+});
