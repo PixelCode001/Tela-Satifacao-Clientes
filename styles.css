@@ -9,7 +9,12 @@ body {
   font-family: 'Roboto', sans-serif;
   background-color: #0d0d0d;
   color: #fff;
-  overflow-x: hidden;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  padding: 0 20px;
+  background: radial-gradient(circle at top right, #101010, #232323);
+  min-height: 100vh;
 }
 
 /* Container Principal */
@@ -17,63 +22,60 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 20px;
+  padding: 40px 0;
 }
 
 /* Hero Section */
 .hero-section {
   text-align: center;
-  padding: 100px 20px;
-  background: linear-gradient(135deg, #a8e6cf, #4CAF50, #2e7d32);
+  padding: 120px 20px;
+  background: linear-gradient(135deg, #a8e6cf, #FF3366, #2e7d32);
   border-radius: 0 0 50% 50% / 15%;
   color: #fff;
   position: relative;
   overflow: hidden;
-  box-shadow: 0 10px 50px rgba(0, 0, 0, 0.5);
-  width: 100%;
-  max-width: 1200px;
+  box-shadow: 0 10px 50px rgba(0, 0, 0, 0.3);
+  max-width: 1000px;
   margin: 0 auto;
+  transition: background 0.5s ease-in-out;
 }
 
 .hero-section h1 {
-  font-size: 48px;
-  font-weight: 700;
-  animation: colorPulse 4s infinite;
+  font-size: 4rem;
+  font-weight: bold;
+  animation: colorPulse 5s infinite;
+  letter-spacing: 3px;
 }
 
 .hero-section p {
-  font-size: 20px;
+  font-size: 1.5rem;
   margin-bottom: 30px;
   line-height: 1.6;
-}
-
-@keyframes colorPulse {
-  0%, 100% { color: #fff; }
-  50% { color: #ff4b33; }
 }
 
 .hero-buttons {
   display: flex;
   justify-content: center;
-  gap: 20px;
-  flex-wrap: wrap;
+  gap: 25px;
   margin-top: 20px;
 }
 
 .hero-button {
-  padding: 15px 30px;
+  padding: 15px 40px;
   margin: 10px;
   font-weight: bold;
   text-decoration: none;
   color: #fff;
   background-color: #FF3366;
-  border-radius: 30px;
-  transition: transform 0.3s ease, background-color 0.3s ease;
+  border-radius: 40px;
+  transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+  font-size: 1.1rem;
 }
 
 .hero-button:hover {
   background-color: #FF4D79;
   transform: scale(1.1);
+  box-shadow: 0 10px 20px rgba(255, 51, 102, 0.4);
 }
 
 .hero-button.secondary {
@@ -93,380 +95,370 @@ body {
   background-color: #FFCCCC;
   color: #ff3366;
 }
-/* Estilo geral */
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f2f5;
-    display: flex;
-    justify-content: center;
-    padding: 20px;
+
+@keyframes colorPulse {
+  0%, 100% { color: #fff; }
+  50% { color: #ff4b33; }
 }
 
-/* Fundo com Degradê Verde */
-.header {
-  width: 100%;
-  padding: 40px 0;
-  background: linear-gradient(135deg, #4CAF50, #2E7D32);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-/* Estilo do Logo */
-.logo {
-  display: flex;
-  align-items: center;
-  font-family: Arial, sans-serif;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-.logo-text {
-  font-size: 3em;
-  color: #ffffff;
-  position: relative;
-}
-
-.logo-flag {
-  width: 20px;
-  height: 12px;
-  background: linear-gradient(to right, red, yellow);
-  clip-path: polygon(0 0, 100% 0, 70% 100%, 0 100%);
-  margin-left: -10px; /* Ajusta a posição em relação ao "i" */
-  position: relative;
-  top: -10px;
-}
-
-.subtext {
-  font-size: 1em;
-  color: #ffffff;
-  display: block;
-  margin-top: 5px;
-  text-transform: lowercase;
-  margin-left: 5px;
-}
-
-
-/* Seção principal */
+/* Seção Avalie Nossos Serviços */
 .evaluation-section {
-    max-width: 800px;
-    background: #ffffff;
-    border-radius: 12px;
-    padding: 20px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-    text-align: center;
+  max-width: 900px;
+  margin: 40px auto;
+  background: linear-gradient(135deg, #ffffff, #e8f5e9);
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  text-align: center;
 }
 
-/* Título da seção */
 .evaluation-section h2 {
-    font-size: 2em;
-    margin-bottom: 20px;
-    color: #333333;
+  font-size: 2.5em;
+  color: #2e7d32; /* Verde mais escuro */
+  margin-bottom: 20px;
+}
+
+.evaluation-section p {
+  font-size: 1.2em;
+  color: #4caf50; /* Verde principal */
+  margin-bottom: 30px;
 }
 
 /* Cartões de setor */
 .sector-card {
-    background: #f8f9fa;
-    padding: 15px;
-    border-radius: 8px;
-    margin-bottom: 20px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s;
+  background: #f1f8e9;
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+  text-align: left;
 }
+
 .sector-card:hover {
-    transform: translateY(-5px);
+  transform: scale(1.02);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
 /* Título do setor */
 .sector-card h3 {
-    font-size: 1.5em;
-    color: #444444;
+  font-size: 1.8em;
+  color: #2e7d32; /* Verde mais escuro */
 }
 
 /* Pergunta do setor */
 .sector-card p {
-    font-size: 1em;
-    color: #666666;
-    margin-bottom: 15px;
+  font-size: 1em;
+  color: #388e3c; /* Verde intermediário */
+  margin-bottom: 20px;
 }
 
 /* Botões de avaliação */
 .rating-options {
-    display: flex;
-    gap: 10px;
-    justify-content: center;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 20px;
 }
 
 .rating-button {
-    background: #e0e0e0;
-    border: none;
-    border-radius: 50%;
-    width: 60px;
-    height: 60px;
-    font-size: 1.5em;
-    color: #ffffff;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-weight: bold;
-    position: relative;
+  background: #e0f2f1;
+  border: none;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  font-size: 1.5em;
+  color: #2e7d32;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
 .rating-button:hover {
-    transform: scale(1.1);
+  transform: scale(1.1);
+  background: #a5d6a7;
 }
 
-.rating-button span {
-    font-size: 0.7em;
-    color: #ffffff;
-    position: absolute;
-    bottom: -15px;
+/* Campo de comentário */
+.comment-box {
+  width: 100%;
+  padding: 10px;
+  font-size: 1em;
+  border: 1px solid #c8e6c9;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  resize: none;
+  transition: border 0.3s ease;
 }
 
-/* Cores para cada avaliação */
-.rating-button[data-rating="excelente"] {
-    background-color: #4CAF50;
+.comment-box:focus {
+  border-color: #4caf50;
+  box-shadow: 0 0 8px rgba(76, 175, 80, 0.2);
 }
 
-.rating-button[data-rating="bom"] {
-    background-color: #FFD700;
+/* Botão de envio */
+.send-button {
+  background: #4caf50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1em;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease;
 }
 
-.rating-button[data-rating="regular"] {
-    background-color: #FFA500;
+.send-button:hover {
+  background: #388e3c;
+  transform: scale(1.05);
 }
 
-.rating-button[data-rating="ruim"] {
-    background-color: #FF4500;
+/* Responsividade para dispositivos móveis */
+@media (max-width: 768px) {
+  .evaluation-section {
+    padding: 20px;
+  }
+
+  .sector-card {
+    padding: 15px;
+  }
+
+  .sector-card h3 {
+    font-size: 1.5em;
+  }
+
+  .rating-button {
+    width: 50px;
+    height: 50px;
+    font-size: 1.2em;
+  }
+
+  .send-button {
+    font-size: 0.9em;
+    padding: 10px 15px;
+  }
 }
+
 
 /* Seção de Contato */
 .contact-section {
-  max-width: 800px;
+  max-width: 900px;
   background: #ffffff;
-  border-radius: 12px;
-  padding: 20px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  border-radius: 15px;
+  padding: 40px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
   text-align: center;
   margin-top: 30px;
+  position: relative;
 }
 
 .contact-section h2 {
-  font-size: 2em;
-  margin-bottom: 20px;
-  color: #333333;
+  font-size: 2.5rem;
+  color: #333;
+  font-weight: 700;
+  margin-bottom: 25px;
 }
 
 .contact-section p {
-  font-size: 1em;
-  color: #666666;
-  margin-bottom: 20px;
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 30px;
 }
 
 .contact-section form {
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 20px;
 }
 
 .contact-section input,
 .contact-section textarea {
   width: 100%;
   padding: 12px;
-  font-size: 1em;
-  border-radius: 8px;
+  font-size: 1.1rem;
+  border-radius: 10px;
   border: 1px solid #dddddd;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.05);
   transition: all 0.3s ease;
 }
 
 .contact-section input:focus,
 .contact-section textarea:focus {
   border-color: #4CAF50;
-  box-shadow: 0 2px 8px rgba(76, 175, 80, 0.2);
+  box-shadow: 0 0 8px rgba(76, 175, 80, 0.3);
 }
 
 .contact-section button {
   background: #4CAF50;
   color: #ffffff;
-  padding: 12px;
-  font-size: 1em;
+  padding: 15px;
+  font-size: 1.1rem;
   border: none;
-  border-radius: 8px;
+  border-radius: 10px;
   cursor: pointer;
   transition: background 0.3s ease;
 }
 
 .contact-section button:hover {
   background: #388E3C;
+  
+}
+.faq-section {
+  background-color: #f9f9f9;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  margin-top: 50px;
 }
 
+.faq-section h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 25px;
+  text-align: center;
+}
 
-.faq-button {
-  background-color: #00FF99;
-  color: white;
-  padding: 15px 40px;
-  border-radius: 25px;
-  font-size: 18px;
-  margin-top: 20px;
-  border: none;
+.faq-item {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-.faq-button:hover {
-  background-color: #33FF66;
-  transform: scale(1.05);
+.faq-item:hover {
+  background-color: #FF3366;
+  color: #fff;
+  transform: translateY(-5px);
 }
 
-/* Estilo da Seção de Ajuda */
-.help-section {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 20px;
-  background: #ffffff;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+.faq-item h3 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
-.help-section h2 {
-  font-size: 2em;
-  text-align: center;
-  margin-bottom: 20px;
-  color: #333333;
-}
-
-/* Perguntas Frequentes (FAQ) */
-.faq-section h3 {
-  font-size: 1.5em;
-  color: #4CAF50;
-  margin-bottom: 15px;
-}
-
-.faq-item {
-  border-bottom: 1px solid #dddddd;
-  padding: 10px 0;
-}
-
-.faq-question {
-  background: none;
-  border: none;
-  font-size: 1.1em;
-  font-weight: bold;
-  color: #333;
-  cursor: pointer;
-  text-align: left;
-  width: 100%;
-  outline: none;
+.faq-item h3 span {
+  font-size: 1.5rem;
 }
 
 .faq-answer {
   display: none;
-  padding: 5px 0 10px;
-  font-size: 1em;
-  color: #666;
+  font-size: 1.1rem;
+  color: #555;
+  margin-top: 15px;
 }
 
-.faq-item.active .faq-answer {
+.faq-item.open .faq-answer {
   display: block;
+  transition: display 0.3s ease;
+}
+.faq-section {
+  background-color: #f9f9f9;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  margin-top: 50px;
 }
 
-/* Opções de Contato */
-.contact-option h3 {
-  font-size: 1.5em;
-  color: #4CAF50;
-  margin-top: 20px;
-  margin-bottom: 10px;
-}
-
-.contact-option p {
-  font-size: 1em;
-  color: #666666;
-}
-
-.contact-button {
-  display: inline-block;
-  padding: 10px 15px;
-  margin: 5px;
-  font-size: 1em;
-  color: #ffffff;
-  background-color: #4CAF50;
-  border-radius: 8px;
-  text-decoration: none;
-  transition: background 0.3s ease;
-}
-
-.contact-button:hover {
-  background-color: #388E3C;
-}
-
-/* Informação sobre Atendimento na Loja */
-.in-store-help {
-  margin-top: 20px;
-  font-size: 1em;
-  color: #666666;
+.faq-section h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 25px;
   text-align: center;
 }
-/* Estilos básicos para a seção de mapa */
-.map-section {
-  max-width: 800px;
-  margin: 20px auto;
-  text-align: center;
-  background: #ffffff;
+
+.faq-item {
+  background-color: #fff;
   padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  margin-bottom: 15px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-.map-section h2 {
-  font-size: 1.8em;
-  color: #4CAF50;
-  margin-bottom: 20px;
+.faq-item:hover {
+  background-color: #FF3366;
+  color: #fff;
+  transform: translateY(-5px);
 }
 
-/* Tamanho padrão do iframe */
-.map-section iframe {
-  width: 100%;
-  height: 450px;
-  border: 0;
+.faq-item h3 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.faq-item h3 span {
+  font-size: 1.5rem;
+}
+
+.faq-answer {
+  display: none;
+  font-size: 1.1rem;
+  color: #555;
+  margin-top: 15px;
+}
+
+.faq-item.open .faq-answer {
+  display: block;
+  transition: display 0.3s ease;
+}
+
+
+/* Efeito de movimento de fundo em rolagem */
+@keyframes moveBackground {
+  0% { background-position: 0 0; }
+  100% { background-position: 100% 100%; }
+}
+
+body {
+  animation: moveBackground 30s linear infinite;
 }
 
 /* Media Query para Telas Menores (Celulares) */
 @media (max-width: 600px) {
-  .map-section {
-      padding: 15px;
+  .evaluation-section {
+      padding: 20px;
   }
 
-  .map-section h2 {
-      font-size: 1.5em;
+  .evaluation-section h2 {
+      font-size: 1.8rem;
   }
 
-  .map-section iframe {
-      height: 300px;
+  .sector-card h3 {
+      font-size: 1.4rem;
   }
 }
 
-/* Media Query para Telas Médias (Tablets) */
+/* Animação para quando o elemento entrar na tela (slide-up) */
+@keyframes slideUp {
+  0% {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Aplicar animação nos elementos */
+.slide-up {
+  opacity: 0;
+  animation: slideUp 1s forwards;
+}
+
+/* Para criar uma animação suave no mobile */
 @media (max-width: 768px) {
-  .map-section {
-      padding: 15px;
-  }
-
-  .map-section h2 {
-      font-size: 1.6em;
-  }
-
-  .map-section iframe {
-      height: 350px;
-  }
-}
-
-/* Media Query para Telas Grandes (Desktop) */
-@media (min-width: 1024px) {
-  .map-section iframe {
-      height: 500px;
+  .slide-up {
+    animation-duration: 1.5s;
   }
 }
