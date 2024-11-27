@@ -1,198 +1,102 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Avaliação do Supermercado União</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Supermercado - Setores</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="color-line"></div>
-    
 
-    <!-- Hero Section com CTA -->
-    <header class="hero-section">
-        <div class="header">
-            <img src="images/logo.png" alt="Logo União Supermercado" class="logo">
-        </div>
-        
-        <h1>Bem-vindo ao Supermercado União!</h1>
-        <p>Nosso compromisso é oferecer o melhor para você. Ajude-nos a melhorar!</p>
-        <div class="hero-buttons">
-            <a href="#evaluation-section" class="hero-button primary">Avaliar Loja</a>
-            <a href="#contact-section" class="hero-button secondary">Fale Conosco</a>
-            <a href="#help-section" class="hero-button tertiary">Precisa de Ajuda?</a>
-        </div>
-    </header>
-
-        
-        <div class="evaluation-section">
-            <h2>Avalie Nossos Serviços</h2>
-            
-            <!-- Operador(a) de Caixa -->
-            <div class="sector-card">
-                <h3>Caixa</h3>
-                <p>Como você avalia o atendimento no caixa?</p>
-                <div class="rating-options">
-                  <button class="rating-button" data-rating="excelente">😍</button>
-                  <button class="rating-button" data-rating="bom">🙂</button>
-                  <button class="rating-button" data-rating="regular">😐</button>
-                  <button class="rating-button" data-rating="ruim">😡</button>
-                </div>
-                <textarea class="comment-box" placeholder="Deixe um comentário (opcional)..."></textarea>
-                <button class="send-button">Enviar Avaliação</button>
-              </div>
-            
-            <!-- Empacotadores -->
-            <div class="sector-card">
-                <h3>Empacotadores</h3>
-                <p>Como você avalia o atendimento dos empacotadores?</p>
-                <div class="rating-options">
-                    <button class="rating-button" data-rating="excelente">😍<span>Excelente</span></button>
-                    <button class="rating-button" data-rating="bom">🙂<span>Bom</span></button>
-                    <button class="rating-button" data-rating="regular">😐<span>Regular</span></button>
-                    <button class="rating-button" data-rating="ruim">😡<span>Ruim</span></button>
-                </div>
-                <textarea class="comment-box" placeholder="Deixe um comentário (opcional)..."></textarea>
-                <button class="send-button">Enviar Avaliação</button>
-            
-            </div>
-        
-            <!-- Repita essa estrutura para os outros setores -->
-            <div class="sector-card">
-                <h3>Entregas</h3>
-                <p>Como você avalia o serviço de entregas?</p>
-                <div class="rating-options">
-                    <button class="rating-button" data-rating="excelente">😍<span>Excelente</span></button>
-                    <button class="rating-button" data-rating="bom">🙂<span>Bom</span></button>
-                    <button class="rating-button" data-rating="regular">😐<span>Regular</span></button>
-                    <button class="rating-button" data-rating="ruim">😡<span>Ruim</span></button>
-                </div>
-                <textarea class="comment-box" placeholder="Deixe um comentário (opcional)..."></textarea>
-                <button class="send-button">Enviar Avaliação</button>            
-            </div>
-        
-            <div class="sector-card">
-                <h3>Pedidos WhatsApp</h3>
-                <p>Como você avalia o atendimento dos pedidos via WhatsApp?</p>
-                <div class="rating-options">
-                    <button class="rating-button" data-rating="excelente">😍<span>Excelente</span></button>
-                    <button class="rating-button" data-rating="bom">🙂<span>Bom</span></button>
-                    <button class="rating-button" data-rating="regular">😐<span>Regular</span></button>
-                    <button class="rating-button" data-rating="ruim">😡<span>Ruim</span></button>
-                </div>
-                <textarea class="comment-box" placeholder="Deixe um comentário (opcional)..."></textarea>
-                <button class="send-button">Enviar Avaliação</button>            
-            </div>
-        
-            <div class="sector-card">
-                <h3>Açougue</h3>
-                <p>Como você avalia o atendimento no açougue?</p>
-                <div class="rating-options">
-                    <button class="rating-button" data-rating="excelente">😍<span>Excelente</span></button>
-                    <button class="rating-button" data-rating="bom">🙂<span>Bom</span></button>
-                    <button class="rating-button" data-rating="regular">😐<span>Regular</span></button>
-                    <button class="rating-button" data-rating="ruim">😡<span>Ruim</span></button>
-                </div>
-                <textarea class="comment-box" placeholder="Deixe um comentário (opcional)..."></textarea>
-                <button class="send-button">Enviar Avaliação</button>            
-            </div>
-        
-            <div class="sector-card">
-                <h3>Padaria</h3>
-                <p>Como você avalia o atendimento na padaria?</p>
-                <div class="rating-options">
-                    <button class="rating-button" data-rating="excelente">😍<span>Excelente</span></button>
-                    <button class="rating-button" data-rating="bom">🙂<span>Bom</span></button>
-                    <button class="rating-button" data-rating="regular">😐<span>Regular</span></button>
-                    <button class="rating-button" data-rating="ruim">😡<span>Ruim</span></button>
-                </div>
-                <textarea class="comment-box" placeholder="Deixe um comentário (opcional)..."></textarea>
-                <button class="send-button">Enviar Avaliação</button>            
-            </div>
-        
-            <div class="sector-card">
-                <h3>Hortifruti</h3>
-                <p>Como você avalia a qualidade e organização do hortifruti?</p>
-                <div class="rating-options">
-                    <button class="rating-button" data-rating="excelente">😍<span>Excelente</span></button>
-                    <button class="rating-button" data-rating="bom">🙂<span>Bom</span></button>
-                    <button class="rating-button" data-rating="regular">😐<span>Regular</span></button>
-                    <button class="rating-button" data-rating="ruim">😡<span>Ruim</span></button>
-                </div>
-                <textarea class="comment-box" placeholder="Deixe um comentário (opcional)..."></textarea>
-                <button class="send-button">Enviar Avaliação</button>            
-            </div>
-        
-            <div class="sector-card">
-                <h3>Limpeza de Loja</h3>
-                <p>Como você avalia a limpeza e organização da loja?</p>
-                <div class="rating-options">
-                    <button class="rating-button" data-rating="excelente">😍<span>Excelente</span></button>
-                    <button class="rating-button" data-rating="bom">🙂<span>Bom</span></button>
-                    <button class="rating-button" data-rating="regular">😐<span>Regular</span></button>
-                    <button class="rating-button" data-rating="ruim">😡<span>Ruim</span></button>
-                </div>
-                <textarea class="comment-box" placeholder="Deixe um comentário (opcional)..."></textarea>
-                <button class="send-button">Enviar Avaliação</button>            
-            </div>
-        </div>
-        
-        <!-- Seção de Contato -->
-        <div class="contact-section">
-            <h2>Contato</h2>
-            <p>Tem alguma dúvida ou sugestão? Entre em contato conosco!</p>
-            <form action="#" method="post">
-                <input type="text" placeholder="Nome" required>
-                <input type="email" placeholder="Email" required>
-                <textarea placeholder="Sua mensagem"></textarea>
-                <button type="submit">Enviar</button>
-            </form>
-        </div>
-        
-    <script>
-        // Interação com as Emojis de Avaliação
-        document.querySelectorAll('.emoji-rating span').forEach(span => {
-            span.addEventListener('click', function() {
-                document.querySelectorAll('.emoji-rating span').forEach(s => s.classList.remove('selected'));
-                this.classList.add('selected');
-            });
-        });
-    </script>
-
-    
-<!-- Seção "Precisa de Ajuda?" -->
-<div class="precisa-ajuda-section">
-    <h2>Precisa de Ajuda?</h2>
-    <p>Nosso time está aqui para te ajudar. Caso tenha dúvidas, entre em contato com a gente agora!</p>
-    <a href="mailto:ajuda@uniaomarket.com" class="contact-button">Entre em Contato</a>
+  <div class="brutal-welcome">
+    <h1 class="brutal-title">Bem-vindo ao Mercado</h1>
+    <p class="brutal-subtitle">Escolha um setor para começar</p>
+    <a href="#setores" class="brutal-button brutal-start">
+      Iniciar
+    </a>
   </div>
+
+  <div class="brutal-record-manager">
+    <input type="checkbox" id="brutal-action-toggle" class="brutal-toggle" />
+    <label for="brutal-action-toggle" class="brutal-button">
+      Selecione um Setor
+    </label>
   
-  <!-- Seção "Perguntas Frequentes" -->
-  <div class="faq-section">
-    <h2>Perguntas Frequentes</h2>
-    
-    <div class="faq-item">
-      <h3><span>❓</span> Como posso fazer meu pedido online?</h3>
-      <div class="faq-answer">
-        <p>Você pode fazer seu pedido através do nosso site ou pelo WhatsApp. Basta clicar no botão "Fazer Pedido" e seguir as instruções.</p>
-      </div>
-    </div>
-    
-    <div class="faq-item">
-      <h3><span>❓</span> Como faço para cancelar meu pedido?</h3>
-      <div class="faq-answer">
-        <p>Para cancelar seu pedido, basta entrar em contato conosco pelo WhatsApp ou pelo e-mail até 2 horas após a realização do pedido.</p>
-      </div>
-    </div>
+    <div class="brutal-panel">
+      <p class="brutal-title">Setores disponíveis:</p>
+      <div class="brutal-options">
+      
+        <input type="radio" id="setor-1" name="setor" class="brutal-radio" />
+        <label for="setor-1" class="brutal-option">
+          <span class="brutal-icon">🍎</span>
+          Frutas
+        </label>
   
-    <div class="faq-item">
-      <h3><span>❓</span> Quais formas de pagamento são aceitas?</h3>
-      <div class="faq-answer">
-        <p>Aceitamos pagamentos via cartão de crédito, débito e PIX. Escolha a opção que mais lhe convém na finalização da compra.</p>
+        <input type="radio" id="setor-2" name="setor" class="brutal-radio" />
+        <label for="setor-2" class="brutal-option">
+          <span class="brutal-icon">🍞</span>
+          Pães
+        </label>
+  
+        
+        <input type="radio" id="setor-3" name="setor" class="brutal-radio" />
+        <label for="setor-3" class="brutal-option">
+          <span class="brutal-icon">🥩</span>
+          Carnes
+        </label>
+  
+        <input type="radio" id="setor-4" name="setor" class="brutal-radio" />
+        <label for="setor-4" class="brutal-option">
+          <span class="brutal-icon">💳</span>
+          Caixa
+        </label>
+  
+        <input type="radio" id="setor-5" name="setor" class="brutal-radio" />
+        <label for="setor-5" class="brutal-option">
+          <span class="brutal-icon">🧹</span>
+          Limpeza
+        </label>
+  
+        <input type="radio" id="setor-6" name="setor" class="brutal-radio" />
+        <label for="setor-6" class="brutal-option">
+          <span class="brutal-icon">📦</span>
+          Produtos
+        </label>
+      </div>
+  
+      <div class="brutal-confirmation">
+        <p class="brutal-text">Digite 'CONFIRMAR' para prosseguir:</p>
+        <input type="text" class="brutal-input" pattern="CONFIRMAR" required />
+        <button class="brutal-proceed" disabled>Prosseguir</button>
       </div>
     </div>
   </div>
-</div>
+
+  <div class="feedback-container">
+    <h1 class="feedback-title"> Descreva sua experiência(opcional)</h1>
+    <textarea class="feedback-textarea" placeholder="Your feedback..."></textarea>
+    
+    <div class="feedback-actions">
+      <button class="feedback-btn">
+        <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 0 512 512">
+          <path d="M464 256A208 208 0 1 0 48 256a208 208 0 1 0 416 0zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256zm177.6 62.1C192.8 334.5 218.8 352 256 352s63.2-17.5 78.4-33.9c9-9.7 24.2-10.4 33.9-1.4s10.4 24.2 1.4 33.9c-22 23.8-60 49.4-113.6 49.4s-91.7-25.5-113.6-49.4c-9-9.7-8.4-24.9 1.4-33.9s24.9-8.4 33.9 1.4zM144.4 208a32 32 0 1 1 64 0 32 32 0 1 1 -64 0zm192-32a32 32 0 1 1 0 64 32 32 0 1 1 0-64z"></path>
+        </svg>
+      </button>
+      
+      <button class="feedback-btn">
+        <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 0 512 512">
+          <path d="M464 256A208 208 0 1 0 48 256a208 208 0 1 0 416 0zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256zM174.6 384.1c-4.5 12.5-18.2 18.9-30.7 14.4s-18.9-18.2-14.4-30.7C146.9 319.4 198.9 288 256 288s109.1 31.4 126.6 79.9c4.5 12.5-2 26.2-14.4 30.7s-26.2-2-30.7-14.4C328.2 358.5 297.2 336 256 336s-72.2 22.5-81.4 48.1zM144.4 208a32 32 0 1 1 64 0 32 32 0 1 1 -64 0zm192-32a32 32 0 1 1 0 64 32 32 0 1 1 0-64z"></path>
+        </svg>
+      </button>
+      
+      <button class="feedback-btn">
+        <svg fill="none" viewBox="0 0 24 24" height="30px" width="30px" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linejoin="round" stroke-linecap="round" stroke-width="1.5" d="M7.39999 6.32003L15.89 3.49003C19.7 2.22003 21.77 4.30003 20.51 8.11003L17.68 16.6C15.78 22.31 12.66 22.31 10.76 16.6L9.91999 14.08L7.39999 13.24C1.68999 11.34 1.68999 8.23003 7.39999 6.32003Z"></path>
+          <path stroke-linejoin="round" stroke-linecap="round" stroke-width="1.5" d="M10.11 13.6501L13.69 10.0601"></path>
+        </svg>
+      </button>
+    </div>
+  </div>
+
 </body>
 </html>
