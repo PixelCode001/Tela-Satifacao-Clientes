@@ -1,445 +1,188 @@
-/* Reset e Configurações Básicas */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: 'Roboto', sans-serif;
-  background-color: #0d0d0d;
-  color: #fff;
-  overflow-y: auto;
-  display: flex;
-  flex-direction: column;
-  padding: 0 20px;
-  background: radial-gradient(circle at top right, #101010, #232323);
-  min-height: 100vh;
-}
-
-/* Container Principal */
-.container {
+.brutal-welcome {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 40px 0;
+  justify-content: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #4ecdc4, #2c786c);
+  color: #ffffff;
+  text-align: center;
+  padding: 20px;
 }
 
-/* Hero Section */
-.hero-section {
+.brutal-title {
+  font-size: 48px;
+  font-weight: bold;
+  text-shadow: 4px 4px 0 #000000;
+  margin-bottom: 20px;
+  transition: transform 0.3s, color 0.3s;
+}
+
+.brutal-title:hover {
+  transform: translateY(-4px);
+  color: #ff6b6b;
+}
+
+.brutal-subtitle {
+  font-size: 24px;
+  margin-bottom: 40px;
+  text-shadow: 2px 2px 0 #000000;
+}
+
+.brutal-button.brutal-start {
+  display: inline-block;
+  background-color: #ffffff;
+  color: #000000;
+  padding: 20px 40px;
+  font-size: 24px;
+  font-weight: bold;
   text-align: center;
-  padding: 120px 20px;
-  background: linear-gradient(135deg, #a8e6cf, #FF3366, #2e7d32);
-  border-radius: 0 0 50% 50% / 15%;
-  color: #fff;
+  cursor: pointer;
+  border: 4px solid #000000;
+  text-decoration: none;
+  transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
   position: relative;
   overflow: hidden;
-  box-shadow: 0 10px 50px rgba(0, 0, 0, 0.3);
-  max-width: 1000px;
-  margin: 0 auto;
-  transition: background 0.5s ease-in-out;
 }
 
-.hero-section h1 {
-  font-size: 4rem;
-  font-weight: bold;
-  animation: colorPulse 5s infinite;
-  letter-spacing: 3px;
+.brutal-button.brutal-start::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: rgba(0, 0, 0, 0.1);
+  transform: rotate(45deg);
+  transition: transform 0.5s;
 }
 
-.hero-section p {
-  font-size: 1.5rem;
-  margin-bottom: 30px;
-  line-height: 1.6;
+.brutal-button.brutal-start:hover::after {
+  transform: rotate(45deg) translate(50%, 50%);
 }
 
-.hero-buttons {
-  display: flex;
-  justify-content: center;
-  gap: 25px;
-  margin-top: 20px;
+.brutal-button.brutal-start:hover {
+  transform: translate(-4px, -4px);
+  box-shadow: 8px 8px 0 #000000;
 }
 
-.hero-button {
-  padding: 15px 40px;
-  margin: 10px;
-  font-weight: bold;
-  text-decoration: none;
-  color: #fff;
-  background-color: #FF3366;
-  border-radius: 40px;
-  transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
-  font-size: 1.1rem;
+.brutal-button.brutal-start:active {
+  animation: brutal-buttonPress 0.3s forwards;
 }
 
-.hero-button:hover {
-  background-color: #FF4D79;
-  transform: scale(1.1);
-  box-shadow: 0 10px 20px rgba(255, 51, 102, 0.4);
+
+.brutal-record-manager {
+  perspective: 1000px;
+  max-width: 400px;
+  margin: 20px auto;
+  background-color: #ffffff;
+  border: 4px solid #000000;
+  box-shadow: 12px 12px 0 #000000;
+  transition: transform 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
 }
 
-.hero-button.secondary {
-  background-color: #00FF99;
+.brutal-record-manager .brutal-toggle {
+  display: none;
 }
 
-.hero-button.secondary:hover {
-  background-color: #33FF66;
-}
-
-.hero-button.tertiary {
-  background-color: #fff;
-  color: #FF3366;
-}
-
-.hero-button.tertiary:hover {
-  background-color: #FFCCCC;
-  color: #ff3366;
-}
-
-@keyframes colorPulse {
-  0%, 100% { color: #fff; }
-  50% { color: #ff4b33; }
-}
-
-/* Seção Avalie Nossos Serviços */
-.evaluation-section {
-  max-width: 900px;
-  margin: 40px auto;
-  background: linear-gradient(135deg, #ffffff, #e8f5e9);
-  border-radius: 12px;
-  padding: 30px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-  text-align: center;
-}
-
-.evaluation-section h2 {
-  font-size: 2.5em;
-  color: #2e7d32; /* Verde mais escuro */
-  margin-bottom: 20px;
-}
-
-.evaluation-section p {
-  font-size: 1.2em;
-  color: #4caf50; /* Verde principal */
-  margin-bottom: 30px;
-}
-
-/* Cartões de setor */
-.sector-card {
-  background: #f1f8e9;
-  padding: 20px;
-  border-radius: 12px;
-  margin-bottom: 20px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.2s ease;
-  text-align: left;
-}
-
-.sector-card:hover {
-  transform: scale(1.02);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-}
-
-/* Título do setor */
-.sector-card h3 {
-  font-size: 1.8em;
-  color: #2e7d32; /* Verde mais escuro */
-}
-
-/* Pergunta do setor */
-.sector-card p {
-  font-size: 1em;
-  color: #388e3c; /* Verde intermediário */
-  margin-bottom: 20px;
-}
-
-/* Botões de avaliação */
-.rating-options {
-  display: flex;
-  gap: 10px;
-  justify-content: center;
-  margin-bottom: 20px;
-}
-
-.rating-button {
-  background: #e0f2f1;
-  border: none;
-  border-radius: 50%;
-  width: 60px;
-  height: 60px;
-  font-size: 1.5em;
-  color: #2e7d32;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.rating-button:hover {
-  transform: scale(1.1);
-  background: #a5d6a7;
-}
-
-/* Campo de comentário */
-.comment-box {
+.brutal-record-manager .brutal-button {
+  display: block;
   width: 100%;
-  padding: 10px;
-  font-size: 1em;
-  border: 1px solid #c8e6c9;
-  border-radius: 8px;
-  margin-bottom: 15px;
-  resize: none;
-  transition: border 0.3s ease;
-}
-
-.comment-box:focus {
-  border-color: #4caf50;
-  box-shadow: 0 0 8px rgba(76, 175, 80, 0.2);
-}
-
-/* Botão de envio */
-.send-button {
-  background: #4caf50;
-  color: white;
-  padding: 12px 20px;
-  border: none;
-  border-radius: 8px;
-  font-size: 1em;
+  background-color: #4ecdc4;
+  color: #000000;
+  padding: 20px;
+  font-size: 24px;
   font-weight: bold;
-  cursor: pointer;
-  transition: background 0.3s ease, transform 0.3s ease;
-}
-
-.send-button:hover {
-  background: #388e3c;
-  transform: scale(1.05);
-}
-
-/* Responsividade para dispositivos móveis */
-@media (max-width: 768px) {
-  .evaluation-section {
-    padding: 20px;
-  }
-
-  .sector-card {
-    padding: 15px;
-  }
-
-  .sector-card h3 {
-    font-size: 1.5em;
-  }
-
-  .rating-button {
-    width: 50px;
-    height: 50px;
-    font-size: 1.2em;
-  }
-
-  .send-button {
-    font-size: 0.9em;
-    padding: 10px 15px;
-  }
-}
-
-
-/* Seção de Contato */
-.contact-section {
-  max-width: 900px;
-  background: #ffffff;
-  border-radius: 15px;
-  padding: 40px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
   text-align: center;
-  margin-top: 30px;
+  cursor: pointer;
+  border: 4px solid #000000;
+  transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
   position: relative;
+  overflow: hidden;
 }
 
-.contact-section h2 {
-  font-size: 2.5rem;
-  color: #333;
-  font-weight: 700;
-  margin-bottom: 25px;
+.brutal-record-manager .brutal-button:hover {
+  transform: translate(-4px, -4px);
+  box-shadow: 8px 8px 0 #000000;
 }
 
-.contact-section p {
-  font-size: 1.1rem;
-  color: #666;
-  margin-bottom: 30px;
+.brutal-record-manager .brutal-panel {
+  display: none;
+  padding: 20px;
+  border-top: 4px solid #000000;
+  transform-origin: top;
+  transition: transform 0.5s, opacity 0.5s;
+  transform: scaleY(0);
+  opacity: 0;
 }
 
-.contact-section form {
+.brutal-record-manager .brutal-toggle:checked ~ .brutal-panel {
+  display: block;
+  animation: brutal-panelAppear 0.5s forwards;
+}
+
+@keyframes brutal-panelAppear {
+  0% {
+    transform: scaleY(0);
+    opacity: 0;
+  }
+  100% {
+    transform: scaleY(1);
+    opacity: 1;
+  }
+}
+
+.brutal-record-manager .brutal-options {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.brutal-record-manager .brutal-radio {
+  display: none;
+}
+
+.brutal-record-manager .brutal-option {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  background-color: #81c784;
+  border: 3px solid #000000;
+  padding: 15px 10px;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
+  text-align: center;
 }
 
-.contact-section input,
-.contact-section textarea {
-  width: 100%;
-  padding: 12px;
-  font-size: 1.1rem;
-  border-radius: 10px;
-  border: 1px solid #dddddd;
-  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.05);
-  transition: all 0.3s ease;
+.brutal-record-manager .brutal-option:hover {
+  transform: translate(-2px, -2px) rotate(2deg);
+  box-shadow: 5px 5px 0 #000000;
 }
 
-.contact-section input:focus,
-.contact-section textarea:focus {
-  border-color: #4CAF50;
-  box-shadow: 0 0 8px rgba(76, 175, 80, 0.3);
+.brutal-record-manager .brutal-option .brutal-icon {
+  font-size: 3rem;
+  margin-bottom: 10px;
 }
 
-.contact-section button {
-  background: #4CAF50;
-  color: #ffffff;
+.brutal-record-manager .brutal-confirmation {
+  display: none;
+  margin-top: 20px;
   padding: 15px;
-  font-size: 1.1rem;
-  border: none;
-  border-radius: 10px;
-  cursor: pointer;
-  transition: background 0.3s ease;
+  border: 3px solid #000000;
+  background-color: #ffe66d;
+  transform: translateY(20px);
+  opacity: 0;
+  transition: transform 0.5s, opacity 0.5s;
 }
 
-.contact-section button:hover {
-  background: #388E3C;
-  
-}
-.faq-section {
-  background-color: #f9f9f9;
-  padding: 40px;
-  border-radius: 10px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-  margin-top: 50px;
-}
-
-.faq-section h2 {
-  font-size: 2.5rem;
-  font-weight: 700;
-  margin-bottom: 25px;
-  text-align: center;
-}
-
-.faq-item {
-  background-color: #fff;
-  padding: 20px;
-  border-radius: 10px;
-  margin-bottom: 15px;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
-  cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-.faq-item:hover {
-  background-color: #FF3366;
-  color: #fff;
-  transform: translateY(-5px);
-}
-
-.faq-item h3 {
-  font-size: 1.8rem;
-  font-weight: 600;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.faq-item h3 span {
-  font-size: 1.5rem;
-}
-
-.faq-answer {
-  display: none;
-  font-size: 1.1rem;
-  color: #555;
-  margin-top: 15px;
-}
-
-.faq-item.open .faq-answer {
+.brutal-record-manager .brutal-radio:checked ~ .brutal-confirmation {
   display: block;
-  transition: display 0.3s ease;
-}
-.faq-section {
-  background-color: #f9f9f9;
-  padding: 40px;
-  border-radius: 10px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-  margin-top: 50px;
+  animation: brutal-confirmationAppear 0.5s forwards;
 }
 
-.faq-section h2 {
-  font-size: 2.5rem;
-  font-weight: 700;
-  margin-bottom: 25px;
-  text-align: center;
-}
-
-.faq-item {
-  background-color: #fff;
-  padding: 20px;
-  border-radius: 10px;
-  margin-bottom: 15px;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
-  cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-.faq-item:hover {
-  background-color: #FF3366;
-  color: #fff;
-  transform: translateY(-5px);
-}
-
-.faq-item h3 {
-  font-size: 1.8rem;
-  font-weight: 600;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.faq-item h3 span {
-  font-size: 1.5rem;
-}
-
-.faq-answer {
-  display: none;
-  font-size: 1.1rem;
-  color: #555;
-  margin-top: 15px;
-}
-
-.faq-item.open .faq-answer {
-  display: block;
-  transition: display 0.3s ease;
-}
-
-
-/* Efeito de movimento de fundo em rolagem */
-@keyframes moveBackground {
-  0% { background-position: 0 0; }
-  100% { background-position: 100% 100%; }
-}
-
-body {
-  animation: moveBackground 30s linear infinite;
-}
-
-/* Media Query para Telas Menores (Celulares) */
-@media (max-width: 600px) {
-  .evaluation-section {
-      padding: 20px;
-  }
-
-  .evaluation-section h2 {
-      font-size: 1.8rem;
-  }
-
-  .sector-card h3 {
-      font-size: 1.4rem;
-  }
-}
-
-/* Animação para quando o elemento entrar na tela (slide-up) */
-@keyframes slideUp {
+@keyframes brutal-confirmationAppear {
   0% {
     transform: translateY(20px);
     opacity: 0;
@@ -450,15 +193,91 @@ body {
   }
 }
 
-/* Aplicar animação nos elementos */
-.slide-up {
-  opacity: 0;
-  animation: slideUp 1s forwards;
+.brutal-record-manager .brutal-text {
+  font-weight: bold;
+  margin-bottom: 10px;
 }
 
-/* Para criar uma animação suave no mobile */
-@media (max-width: 768px) {
-  .slide-up {
-    animation-duration: 1.5s;
-  }
+.brutal-record-manager .brutal-input {
+  width: calc(100% - 20px);
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 3px solid #000000;
+  font-family: "Courier New", monospace;
+  font-size: 18px;
+}
+
+.question {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.feedback-container {
+  background-color: white;
+  border: 1px solid #e1e1e1;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 10px;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.feedback-title {
+  font-size: 20px;
+  font-weight: bold;
+  color: #666;
+  grid-column: span 6;
+}
+
+.feedback-textarea {
+  background-color: #f1f1f1;
+  color: #666;
+  border: 1px solid #e1e1e1;
+  border-radius: 8px;
+  padding: 10px;
+  height: 120px;
+  resize: none;
+  outline: none;
+  font-size: 14px;
+  transition: border-color 0.3s;
+}
+
+.feedback-textarea:focus {
+  border-color: #4CAF50;
+}
+
+.feedback-actions {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  grid-column: span 6;
+}
+
+.feedback-btn {
+  background-color: #f1f1f1;
+  border: 1px solid #e1e1e1;
+  border-radius: 8px;
+  padding: 10px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+.feedback-btn:hover {
+  background-color: #4CAF50;
+  border-color: #4CAF50;
+}
+
+.feedback-btn svg {
+  fill: #666;
+  width: 20px;
+  height: 20px;
+}
+
+.feedback-btn:hover svg {
+  fill: #fff;
 }
